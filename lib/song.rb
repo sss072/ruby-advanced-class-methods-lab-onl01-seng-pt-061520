@@ -3,8 +3,6 @@ class Song
   @@all = []
 
   def self.all
-    @@all
-  end
 
   def save
     self.class.all << self
@@ -27,6 +25,8 @@ class Song
   end
   def self.find_by_name(song_name)
     @@all.find{|element| element.name == song_name}
+    @@all
+  end
   end
   def self.find_or_create_by_name(song_name)
     if 
